@@ -1,0 +1,98 @@
+@layer components {
+  .btc-primary-button {
+    @apply px-4 py-2 bg-primary text-test rounded text-base shadow-sm shadow-primary text-center border-primary border-2 hover:bg-primary/80 hover:border-primary/80;
+  }
+  .btc-primary-button:disabled {
+    @apply px-4 py-2 bg-primary/20 text-test rounded text-base shadow-sm shadow-none text-center border-none hover:bg-primary/20 hover:border-none;
+  }
+
+  .btc-secondary-button {
+    @apply px-4 py-2 text-primary rounded text-base border-solid border-primary border-2 text-center hover:border-primary/80 flex justify-center items-center;
+  }
+
+  .btc-secondary-button:disabled {
+    @apply px-4 py-2 text-primary/20 rounded text-base border-solid border-primary/20 border-2 text-center hover:border-primary/20;
+  }
+
+  .btc-icon-button {
+    @apply px-0 bg-transparent text-primary text-center;
+  }
+
+  .btc-text-field {
+    @apply px-4 py-2 bg-background text-text rounded resize-none focus:placeholder:text-primary focus:outline-none focus:border-primary focus:caret-primary focus:text-primary focus:shadow-sm focus:shadow-primary focus:valid:border-success focus:valid:shadow-success focus:valid:placeholder:text-success focus:valid:text-success focus:valid:caret-success;
+    border: solid 1.5px rgb(var(--color-text) / 0.2);
+  }
+
+  .btc-input-container {
+    @apply p-2 bg-background text-text rounded resize-none focus:placeholder:text-primary focus:border-primary focus:caret-primary focus:text-primary focus:shadow-sm focus:shadow-primary focus:valid:border-success focus:valid:shadow-success focus:valid:placeholder:text-success focus:valid:text-success focus:valid:caret-success;
+    border: solid 1.5px rgb(var(--color-text) / 0.2);
+
+    input {
+      @apply px-4 py-2 bg-transparent text-center text-text rounded resize-none focus:outline-none;
+    }
+  }
+
+  .btc-textarea {
+    @apply px-4 py-2 bg-background text-text rounded focus:placeholder:text-primary focus:outline-none focus:border-primary focus:caret-primary focus:text-primary focus:shadow-sm focus:shadow-primary focus:valid:border-success focus:valid:shadow-success  focus:valid:placeholder:text-success focus:valid:text-success focus:valid:caret-success resize-none;
+    border: solid 1.5px rgb(var(--color-text) / 0.2);
+  }
+
+  .btc-selectbar {
+    @apply px-4 py-2 bg-background text-text rounded text-text/50 focus:placeholder:text-primary focus:outline-none focus:border-primary focus:caret-primary focus:text-primary focus:shadow-sm focus:shadow-primary focus:valid:border-success focus:valid:shadow-success focus:valid:placeholder:text-success focus:valid:text-success focus:valid:caret-success;
+    border: solid 1.5px rgb(var(--color-text) / 0.2);
+    font-size: calc(1rem - 2px);
+  }
+
+  .btc-card {
+    @apply p-4 rounded bg-background shadow;
+  }
+
+  .table {
+    @apply w-full  rounded;
+
+    tr {
+      @apply flex justify-between p-2 m-2 rounded-md;
+
+      th,
+      td {
+        @apply text-ellipsis;
+      }
+    }
+
+    tr:nth-child(2n) {
+      background-color: rgb(var(--color-test) / 0.5);
+    }
+
+    tfoot {
+      @apply p-2;
+    }
+  }
+
+  .router-link-active {
+    @apply opacity-50;
+  }
+
+  .progress-bar {
+    @apply bg-overlay/10 flex w-full fixed;
+    --width-progress-bar: 0;
+  }
+  .progress-bar::after {
+    @apply animate-gradient;
+    content: "";
+    background-image: linear-gradient(
+      45deg,
+      rgb(var(--color-primary) / 0.85),
+      rgb(var(--color-primary) / 0.4)
+    );
+    height: 0.3rem;
+    width: var(--width-progress-bar);
+  }
+
+  .btc-avatar {
+    @apply w-16 h-16 bg-primary rounded-circle flex justify-center items-center;
+  }
+
+  .btc-spacer {
+    @apply grow;
+  }
+}
